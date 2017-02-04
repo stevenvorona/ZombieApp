@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 
@@ -43,16 +44,23 @@ public class MainActivity extends Activity {
         });
 
         //btn to spawn zombies
+        Button btSpawn = (Button) findViewById(R.id.spawnZombies);
+        btSpawn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 
-    public boolean onTouchEvent(MotionEvent event) {
-        int x = (int)event.getX();
-        int y = (int)event.getY();
-        switch (event.getAction()) {
-            case MotionEvent.ACTION_DOWN:
-            case MotionEvent.ACTION_MOVE:
-            case MotionEvent.ACTION_UP:
-        }
-        return false;
-    }
+//    public boolean onTouchEvent(MotionEvent event) {
+//        int x = (int)event.getX();
+//        int y = (int)event.getY();
+//        switch (event.getAction()) {
+//            case MotionEvent.ACTION_DOWN:
+//            case MotionEvent.ACTION_MOVE:
+//            case MotionEvent.ACTION_UP:
+//        }
+//        return false;
+//    }
 }

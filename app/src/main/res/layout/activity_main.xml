@@ -6,6 +6,20 @@
     tools:context=".MainActivity">
 
 
+    <FrameLayout
+        android:id="@+id/camera_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+    <Button
+        android:text="SpawnZombies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|center"
+        android:id="@+id/spawnZombies" />
+
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -13,17 +27,5 @@
         android:layout_gravity="right|top"
         android:background="@android:drawable/ic_menu_close_clear_cancel"
         android:padding="20dp"/>
-
-    <FrameLayout
-        android:id="@+id/camera_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/spawnZombies" />
-    </FrameLayout>
 
 </FrameLayout>
