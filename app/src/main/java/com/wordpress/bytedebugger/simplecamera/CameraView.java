@@ -14,9 +14,14 @@ public class CameraView extends SurfaceView implements SurfaceHolder.Callback{
 
     public CameraView(Context context, Camera camera){
         super(context);
-
-        mCamera = camera;
-        mCamera.setDisplayOrientation(90);
+        try{
+            
+            mCamera = camera;
+        
+            mCamera.setDisplayOrientation(90);
+        } catch (Exception e){
+            Log.d("ERROR","error creating camera"+e.getMessage()):
+        }
         //get the holder and set this class as the callback, so we can get camera data here
         mHolder = getHolder();
         mHolder.addCallback(this);
@@ -44,6 +49,7 @@ public class CameraView extends SurfaceView implements SurfaceHolder.Callback{
             mCamera.stopPreview();
         } catch (Exception e){
             //this will happen when you are trying the camera if it's not running
+            Log.d("ERROR", "Running app without camera"+e.getMessage());
         }
 
         //now, recreate the camera preview
